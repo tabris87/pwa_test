@@ -16,9 +16,10 @@ self.addEventListener("install", installEvent => {
 self.addEventListener("activate", activateEvent => {
     activateEvent.waitUntil(
         caches.keys().then(keys => {
-            return Promise.all(keys
-                .filter(key => key !== staticFlashlight)
-                .map(key => chaches.delete(key));                               
+            return Promise.all(
+                keys.filter(key => key !== staticFlashlight)
+                .map(key => chaches.delete(key)
+            ));                               
         })
     );
 });

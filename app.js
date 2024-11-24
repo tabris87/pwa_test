@@ -7,7 +7,7 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-const backgrounds = ['white', 'red', 'aqua', 'green', 'blue', 'deeppink', 'aquamarine', 'yellow'];
+const backgrounds = ['white', 'red', 'aqua', 'green', 'blue', 'deeppink', 'aquamarine', 'yellow', 'black'];
 const brightnesses = [1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1];
 //swipe direction
 let touchstartX = 0;

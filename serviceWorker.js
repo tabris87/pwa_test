@@ -1,3 +1,4 @@
+const version = '0.0.2';
 const staticFlashlight = "dev_flashlight";
 const assets = [
     "./",

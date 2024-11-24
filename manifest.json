@@ -1,0 +1,8 @@
+{
+    "name": "Flashlight",
+    "short_name": "Flash",
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "icons": []
+}

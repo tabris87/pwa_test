@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="EN">
+<title>Flashlight</title>
+
+<head>
+    <link rel="manifest"
+          href="manifest.json" />
+    <style>
+        :root {
+            --background: #fff;
+            --opacityVal: 1.0;
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        div#colored-pane {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            opacity: var(--opacityVal);
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <div id="colored-pane"></div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

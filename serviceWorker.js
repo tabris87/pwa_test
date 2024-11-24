@@ -2,7 +2,8 @@ const staticFlashlight = "dev_flashlight";
 const assets = [
     "./",
     "./app.js",
-    "./index.html"
+    "./index.html",
+    "./manifest.json"
 ];
 
 self.addEventListener("install", installEvent => {

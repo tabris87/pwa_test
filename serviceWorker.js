@@ -1,9 +1,11 @@
+const version = '0.0.3';
 const staticFlashlight = "dev_flashlight";
 const assets = [
     "./",
     "./app.js",
     "./index.html",
-    "./manifest.json"
+    "./manifest.json",
+    "./favicon.ico"
 ];
 
 self.addEventListener("install", installEvent => {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="EN">
-<title>Flashlight</title>
+<title>ColorLight</title>
 
 <head>
     <link rel="manifest"
@@ -17,7 +17,7 @@
             padding: 0;
         }
 
-        div#colored-pane {
+        div#colored_pane {
             width: 100vw;
             height: 100vh;
             margin: 0;
@@ -25,12 +25,93 @@
             background-color: var(--background);
             opacity: var(--opacityVal);
         }
+
+        #color_select[open] {
+            font-size: 2rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 'header' 'main' 'footer';
+            box-shadow: inset 0px 0px 15px 4px gray;
+        }
+
+        #color_select>header {
+            border-bottom: 1px solid gray;
+            grid-area: header;
+        }
+
+        #color_select>main {
+            grid-area: main;
+            padding: 1rem 0.5rem;
+        }
+
+        #color_select>main p {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #color_select>footer {
+            border-top: 1px solid gray;
+            grid-area: footer;
+            display: inline-flex;
+            justify-content: flex-end;
+            padding: 0.5rem 0.25rem;
+        }
+
+        #color_select>footer>button {
+            font-size: 2rem;
+            border-radius: 10%;
+        }
+
+        @media screen and (orientation: portrait) {
+            #color_select {
+                width: 90%;
+                height: 50%;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            #color_select {
+                height: 90%;
+                width: 30%;
+            }
+        }
+
+        ::backdrop {
+            opacity: 0.75;
+        }
     </style>
 
 </head>
 
 <body id="body">
-    <div id="colored-pane"></div>
+    <div id="colored_pane"></div>
+    <dialog id="color_select">
+        <header>
+            <span>Choose color:</span>
+        </header>
+        <main>
+            <p>
+                <label for="color_picker">Select color</label>
+                <input id="color_picker"
+                       type="color"
+                       value="#ff0000" />
+            </p>
+            <p>
+                <label for="brightness_picker">Set brightness</label>
+                <input id="brightness_picker"
+                       type="range" 
+                       value="100" 
+                       step="1"
+                       min="0"
+                       max="100" />
+            </p>
+        </main>
+        <footer>
+            <button>Close</button>
+        </footer>
+    </dialog>
     <script src="./app.js"></script>
 </body>
 
